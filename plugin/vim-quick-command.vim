@@ -29,7 +29,7 @@ function! VimQuickCommand(command)
   let command = split(a:command)
 
   if has_key(g:vim_quick_command_aliases, command[0])
-    exe ":" . g:vim_quick_command_default_terminal . " " . g:vim_quick_commands[command[0]] . " " . join(command[1:], " ")
+    exe ":" . g:vim_quick_command_default_terminal . " " . g:vim_quick_command_aliases[command[0]] . " " . join(command[1:], " ")
     exe ":startinsert"
   else
     echo "Error: " . command[0] . " not defined in g:vim_quick_commands"
