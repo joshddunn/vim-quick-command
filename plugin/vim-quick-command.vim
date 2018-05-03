@@ -6,8 +6,8 @@ if !exists("g:vim_terminal_height")
   let g:vim_quick_commands_terminal_height = 20
 endif
 
-if !exists("g:vim_quick_commands")
-  let g:vim_quick_command_alias = {}
+if !exists("g:vim_quick_command_aliases")
+  let g:vim_quick_command_aliases = {}
 endif
 
 if !exists("g:vim_quick_command_default_terminal")
@@ -28,7 +28,7 @@ command! -nargs=* Zsh call VimTerminalOpen("zsh", <q-args>)
 function! VimQuickCommand(command)
   let command = split(a:command)
 
-  if has_key(g:vim_quick_commands, command[0])
+  if has_key(g:vim_quick_command_aliases, command[0])
     exe ":" . g:vim_quick_command_default_terminal . " " . g:vim_quick_commands[command[0]] . " " . join(command[1:], " ")
     exe ":startinsert"
   else
