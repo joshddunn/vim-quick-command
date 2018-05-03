@@ -2,8 +2,8 @@
 tnoremap <leader><Esc> <C-\><C-n>:q<cr>
 tnoremap <localleader><Esc> <C-\><C-n>
 
-if !exists("g:vim_terminal_height")
-  let g:vim_quick_commands_terminal_height = 20
+if !exists("g:vim_quick_command_terminal_height")
+  let g:vim_quick_command_terminal_height = 20
 endif
 
 if !exists("g:vim_quick_command_aliases")
@@ -17,7 +17,7 @@ endif
 " opening the terminal
 function! VimTerminalOpen(which, command)
   let command = a:command . (len(a:command) ? "\n" : "")
-  exe ":sp term://" . a:which . " | :resize " . g:vim_terminal_height . " | :startinsert | sleep 50m | call feedkeys('" . command . "')"
+  exe ":sp term://" . a:which . " | :resize " . g:vim_quick_command_terminal_height . " | :startinsert | sleep 50m | call feedkeys('" . command . "')"
 endfunction
 
 command! -nargs=* Fish call VimTerminalOpen("fish", <q-args>)
@@ -32,7 +32,7 @@ function! VimQuickCommand(command)
     exe ":" . g:vim_quick_command_default_terminal . " " . g:vim_quick_command_aliases[command[0]] . " " . join(command[1:], " ")
     exe ":startinsert"
   else
-    echo "Error: " . command[0] . " not defined in g:vim_quick_commands"
+    echo "Error: " . command[0] . " not defined in g:vim_quick_command_aliases"
   endif
 endfunction
 
