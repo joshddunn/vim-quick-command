@@ -4,7 +4,13 @@ Be able to alias command-line commands within vim!
 
 Work in progress.
 
-### Variables
+### Usage
+
+You can access a terminal with `:Bash`, `:Fish`, or `:Zsh`.
+
+You can issue a quick command with `:Qc alias maybe_some_other_arguments`
+
+### Options
 
 Set the height of the terminal with
 
