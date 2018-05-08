@@ -1,6 +1,5 @@
 " use escape to get out of terminal mode
-tnoremap <leader><Esc> <C-\><C-n>:q<cr>
-tnoremap <localleader><Esc> <C-\><C-n>
+tnoremap <leader><Esc> <C-\><C-n>
 
 if !exists("g:vim_quick_command_terminal_height")
   let g:vim_quick_command_terminal_height = 20
