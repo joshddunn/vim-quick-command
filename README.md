@@ -10,6 +10,8 @@ You can access a terminal with `:Bash`, `:Fish`, or `:Zsh`.
 
 You can issue a quick command with `:Qc alias maybe_some_other_arguments`
 
+Use `<leader><Esc>` to exit from terminal mode.
+
 ### Options
 
 Set the height of the terminal with
