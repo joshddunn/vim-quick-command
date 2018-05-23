@@ -14,12 +14,12 @@ You can issue a quick command with `:Qc alias maybe_some_other_arguments`
 
 Set the height of the terminal with
 
-  let g:vim_quick_commands_terminal_height = 20
+    let g:vim_quick_commands_terminal_height = 20
 
 Setup your command line alises
 
-  let g:vim_quick_command_alias = {"alias": "really long command you dont want to type"}
+    let g:vim_quick_command_alias = {"alias": "really long command you dont want to type"}
 
 Default terminal
 
-  let g:vim_quick_command_default_terminal = "Bash" or "Zsh" or "Fish"
+    let g:vim_quick_command_default_terminal = "Bash" or "Zsh" or "Fish"
